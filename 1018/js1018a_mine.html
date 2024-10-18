@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帳號密碼</title>
+</head>
+
+<body>
+    <script>
+        function login() {
+            var correctUser = 'admin'; // Correct account
+            var correctPassword = '1234';  // Correct password
+
+            // Prompt user to enter account and password
+            var user = prompt('請輸入帳號');
+            var password = prompt('請輸入密碼');
+
+            // Check if both username and password are correct
+            if (user === correctUser && password === correctPassword) {
+                alert('帳號密碼正確，登入成功');
+            }
+            // Check if username is correct but password is wrong
+            else if (user === correctUser && password !== correctPassword) {
+                alert('帳號正確，密碼錯誤');
+            }
+            // Check if username is wrong but password is correct
+            else if (user !== correctUser && password === correctPassword) {
+                alert('帳號錯誤，密碼正確');
+            }
+            // Both username and password are wrong
+            else {
+                alert('帳號密碼皆錯誤');
+            }
+        }
+
+        // Call the login function
+        login();
+    </script>
+</body>
+
+</html>

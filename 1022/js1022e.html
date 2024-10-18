@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函式</title>
+</head>
+
+<body>
+    <button onclick="(func1())">無參無回</button>
+    <button onclick="alert(func2())">無參有回</button>
+    <button onclick="(func3(5,3))">有參無回</button>
+    <button onclick="alert(func4(3,2))">有參有回</button>
+
+
+    <script>
+        // 函式：不會自己馬上執行，等待被呼叫
+        //無參數，無傳回值
+        function func1() {
+            console.log(`ciao`);
+        }
+
+        // 無參有回
+        function func2() {
+            return 'hola';
+        }
+        // 有參無回
+        function func3(a, b) {
+            console.log(a + b);
+        }
+        // 有參有回
+        function func4(a, b) {
+            return a + b;
+        }
+
+    </script>
+
+</body>
+
+</html>

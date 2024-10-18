@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 不斷彈出輸入視窗，直到「取消」結束
+        // 布林值 boolean
+        // true
+        // false
+
+        var N = 0;
+        while (true) {
+            var apple = window.prompt('請輸入任意內容😒');
+            // 按了取消
+            if (apple == null) {
+                break;  //脫離到迴圈結尾的下一行
+            }
+
+            //是否有內容，用空白來篩選有無內容
+            //去除空白後，是否有內容
+            //trim()->去除資料前後空白
+            if (apple.trim() == '') {
+                alert('餔餔!不能沒有內容喔');
+                continue; //忽略
+            }
+
+            //是否為數字
+            if (isNaN(Number(apple))) {
+                alert('不對喔!你輸入的不是數字，請重新輸入');
+                continue;
+            }
+
+            // 及格人數
+            // 
+
+            N++;
+
+        }
+        // 訊息視窗
+        // window.alert('輸入結束囉😊 你已經輸入了' + N + '次數字');
+        // 輸入:
+        // 100
+        // 20
+        // 50
+        //--------------------
+        // 輸出
+        // 及格人數:?人
+        // 不及格人數:?人
+        // 總分:?分
+        // 總平均: ?分(小數2位)
+
+    </script>
+</body>
+
+</html>
