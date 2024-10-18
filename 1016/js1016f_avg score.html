@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成績平均</title>
+</head>
+
+<body>
+    <script>
+
+        var pass = 0;  // 及格人數
+        var fail = 0;  // 不及格人數
+        var tot = 0;  //總分
+        var avg = 0;  // 總平均
+
+        while (true) {
+            var score = window.prompt('請輸入分數');
+
+            // 按了取消
+            if (score == null) {
+                break;  //脫離到迴圈結尾的下一行
+            }
+
+            //是否有內容，(用空白來篩選有無內容)
+            //去除空白後，是否有內容
+            //trim()->去除資料前後空白(字與字間的空白不會消除)
+            if (score.trim() == '') {
+                alert('內容錯誤，請重新輸入');
+                continue; //忽略
+            }
+
+
+            //是否為數字
+            if (isNaN(Number(score))) {
+                alert('不對喔!你輸入的不是數字，請重新輸入');
+                continue;
+            }
+
+            // 將輸入的分數轉為數值
+            score = Number(score);
+
+            if (score >= 60) {
+                pass++; //及格人數累計
+            } else {
+                fail++; //不及格人數累計
+            }
+
+            // 總分累加
+            tot = tot + score;
+        }
+        // 計算總平均
+        avg = tot / (pass + fail);
+        avg = avg.toFixed(2);
+
+        console.log(`及格: ${pass}人`);
+        console.log(`不及格: ${fail}人`);
+        console.log(`總分: ${tot}分`);
+        console.log(`總平均: ${avg}分`);
+
+    </script>
+</body>
+
+</html>

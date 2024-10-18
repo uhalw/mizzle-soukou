@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迴圈第一次</title>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <hr>
+
+    <script>
+        // for迴圈 for是給已知次數
+        // for (var i = 起始值; 執行迴圈條件; 迴圈起始變數增或減值){...}
+        for (var i = 1; i <= 5; i++) {
+            document.write('午安' + i + '<br>');
+        }
+        document.write('<hr>');      //<hr>水平線
+
+        // while迴圈
+        // 避免造成無窮迴圈，鬼打牆ㄉ狀態
+        var i = 1;
+        while (i <= 5) {
+            document.write('午安' + i + '<br>');
+            i++;  //沒有限定次數的迴圈一定要限定狀態~
+        }
+        document.write('<hr>');      //<hr>水平線
+        // do while
+        var i = 1;
+        do {
+            document.write('午安' + i + '<br>');
+            i++;
+        } while (i <= 5);    //記得用分號結尾
+    </script>
+
+</body>
+
+</html>
