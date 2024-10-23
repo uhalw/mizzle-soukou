@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 取亂數函式
+        function getRandom(min, max) {
+            // 取亂數，max + 1 to include max in the range
+            var a = Math.floor(Math.random() * (max - min + 1)) + min;
+            // 顯示亂數
+            console.log(`${min}~${max} 之間的數值為: ${a}`);
+            return a;
+        }
+        // 測試函式
+        getRandom(0, 2);  // Should print a number between 0 and 2
+        getRandom(0, 4);  // Should print a number between 0 and 4
+        getRandom(0, 9);  // Should print a number between 0 and 9
+
+    </script>
+</body>
+
+</html>

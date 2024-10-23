@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼猜猜看</title>
+</head>
+
+<body>
+
+    <script>
+        // 取亂數函式
+        function getRandom(min, max) {
+            // 取亂數
+
+            var a = Math.floor(Math.random() * (max - min + 1)) + min;
+            // 顯示亂數
+            console.log(`${min}~${max} 之間的數值為: ${a}`);
+            return a;
+        }
+
+        var bingo = getRandom(1, 100);
+        alert(bingo);
+        var ans = document.getElementById('ans');
+        ans.innerHTML = ans.innerHTML + bingo;
+
+        // 寫出迴圈彈出輸入視窗，來輸入值
+        // 檢查是否跟亂數值一樣
+        while (true) {
+            var input = prompt('請輸入任意數字');
+            if (input == bingo) {
+                alert('猜對嚕');
+                // 第1次：50 => 太小了（提示：50-100）
+                // 第2次：90 => 太大了（提示：50-90）
+                // 第3次：80 => 太大了（提示：50-80）
+                // 第4次：55 => 太小了（提示：55-80）
+                // 第5次：60 => 猜對了
+                if (input != bingo) { }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
