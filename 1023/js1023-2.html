@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myP1">im paragraph</p>
+    <button onclick="changecontent()">change paragraph</button>
+
+    <script>
+        function changecontent() {
+            // 取得段落myP1
+            var p1 = document.getElementById('myP1');
+            // 更改內容
+            p1.innerHTML = 'changed!!!';
+        }
+    </script>
+
+    <p id="entryTime"></p>
+    <button onclick="getTime()">GEEEET TIMEEE</button>
+    <script>
+        function getTime() {
+            // get display date time goal
+            var entryTime = document.getElementById('entryTime');
+            // show display date time goal
+            entryTime.innerHTML = new Date().toLocaleString(); 
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="count">1</p>
+    <button onclick="add1()"> +1 </button>
+    <button onclick="zero()"> 歸零</button>
+    <button onclick="cut1()"> -1 </button>
+
+    <script>
+        function add1() {
+            var count = document.getElementById('count');
+            count.innerHTML = Number(count.innerHTML) + 1;
+        }
+        function cut1() {
+            var count = document.getElementById('count');
+            count.innerHTML = Number(count.innerHTML) - 1;
+        }
+        function zero() {
+            var count = document.getElementById('count');
+            count.innerHTML = 0
+
+        }
+    </script>
+</body>
+
+</html>

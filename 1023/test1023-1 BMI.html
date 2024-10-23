@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 計算器</title>
+</head>
+<body>
+    <p id="circle">體重60kg 身高1.6m</p>
+    <button onclick="calculateBMI()">算出BMI</button>
+    <p id="result"></p>
+
+    <script>
+        // 建立一個函式，計算 BMI
+        var calculateBMI = function () {
+            var w = 60; // 體重 (公斤)
+            var h = 1.6; // 身高 (公尺)
+            var bmi = w / (h * h); // 計算 BMI
+            
+            // 判斷 BMI 狀態
+            var status;
+            if (bmi <= 18.5) {
+                status = '體重過輕';
+            } else if (bmi >= 18.5 && bmi < 24) {
+                status = '正常範圍';
+            } else {
+                status = '異常範圍';
+            }
+
+            // 顯示結果
+            document.getElementById('result').innerText = `BMI是: ${bmi.toFixed(1)}，狀態: ${status}`;
+        };
+    </script>
+</body>
+</html>

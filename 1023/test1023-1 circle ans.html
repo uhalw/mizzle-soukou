@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle</title>
+</head>
+
+<body>
+    <p id="p1">圓面積</p>
+    <script>
+
+        // 建立一個函式，傳參數r
+        // 輸入半徑r，算出面積=3.14*r*r
+        // 回傳面積結果在頁面上的段落1
+        // 半徑：？ 圓面積：？
+        // console.log(Math.PI);
+        // console.log(Math.pow(數值,次方數));
+
+        function area(r) {
+            // return (Math.PI * r * r ).toFixed(2);
+            return (Math.PI * Math.pow(r, 2)).toFixed(2);
+        }
+        var p1 = document.getElementById('p1');
+        var inputR = 7;
+
+        // p1.innerHTML = '半徑:' + inputR + '圓面積:' + area(inputR);
+        p1.innerHTML = `半徑: ${inputR}，圓面積： ${area(inputR)}`;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="myP1">im paragraph</p>
+    <button onclick="change1()">change paragraph</button>
+
+    <script>
+        // anon1
+        var change1 = function () {
+            // get paragraph myP1
+            var p1 = document.getElementById('myP1');
+            // change content
+            p1.innerHTML = 'changedddd!';
+        }
+
+        // anom 2
+        var change2 = function () {
+            // get paragraph myP1
+            var p1 = document.getElementById('myP1');
+            // change content
+            p1.innerHTML = 'changedddd2!';
+        }
+
+        // anon3
+        var change3 = () => {
+            // get paragraph myP1
+            var p1 = document.getElementById('myP1');
+            // change content
+            p3.innerHTML = 'changedddd!';
+        }
+    </script>
+</body>
+
+</html>

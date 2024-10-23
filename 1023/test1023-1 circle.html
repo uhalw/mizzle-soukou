@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle</title>
+</head>
+
+<body>
+
+    <p id="circle">半徑是6cm</p>
+    <button onclick="calculateArea()">算出圓面積</button>
+    <p id="result">半徑: ? 圓面積: ?</p>
+
+    <script>
+        // 建立一個函式，計算圓面積
+        var calculateArea = function () {
+            var r = 6; // 假設半徑為6cm
+            var area = 3.14 * r * r; // 計算面積
+            document.getElementById('result').innerText = `半徑: ${r} 圓面積: ${area.toFixed(2)}`; // 顯示結果
+        };
+    </script>
+</body>
+
+</html>
