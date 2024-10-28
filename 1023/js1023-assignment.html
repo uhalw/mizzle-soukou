@@ -8,38 +8,48 @@
 </head>
 
 <body>
+    <h1>終極密碼猜猜看</h1>
+    <p id="ans"></p>
 
     <script>
         // 取亂數函式
         function getRandom(min, max) {
-            // 取亂數
-
             var a = Math.floor(Math.random() * (max - min + 1)) + min;
-            // 顯示亂數
             console.log(`${min}~${max} 之間的數值為: ${a}`);
             return a;
         }
 
         var bingo = getRandom(1, 100);
-        alert(bingo);
         var ans = document.getElementById('ans');
-        ans.innerHTML = ans.innerHTML + bingo;
+        ans.innerHTML = "你猜的數字是: ";
+
+        var small = 1;
+        var big = 100;
+        var attempts = 0;
 
         // 寫出迴圈彈出輸入視窗，來輸入值
-        // 檢查是否跟亂數值一樣
         while (true) {
-            var input = prompt('請輸入任意數字');
-            if (input == bingo) {
-                alert('猜對嚕');
-                // 第1次：50 => 太小了（提示：50-100）
-                // 第2次：90 => 太大了（提示：50-90）
-                // 第3次：80 => 太大了（提示：50-80）
-                // 第4次：55 => 太小了（提示：55-80）
-                // 第5次：60 => 猜對了
-                if (input != bingo) { }
+            var input = prompt(`請輸入 ${small} 到 ${big} 之間的任意數字`);
+            input = Number(input); // 將輸入轉為數字
+
+            if (isNaN(input) || input < small || input > big) {
+                alert(`請輸入有效的數字，範圍在 ${small} 到 ${big} 之間`);
+                continue; // 如果輸入無效，重新開始迴圈
+            }
+
+            attempts++;
+
+            if (input === bingo) {
+                alert(`猜對了！你總共猜了 ${attempts} 次。`);
+                break; // 猜對，結束迴圈
+            } else if (input < bingo) {
+                alert(`太小了！請再試一次。`);
+                small = input + 1; // 更新下限
+            } else {
+                alert(`太大了！請再試一次。`);
+                big = input - 1; // 更新上限
             }
         }
-
     </script>
 </body>
 
