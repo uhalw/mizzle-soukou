@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列課堂練習</title>
+</head>
+
+<body>
+    <script>
+        // 顯示陣列中字串(string)的值 => typeof
+        var arr1 = [1, 2, 3, 4, 5, '12345'];
+        console.log(arr1);
+        console.log(typeof arr1);
+
+        for (var i = 0; i < arr1.length; i++) {
+            document.write(arr1[i] + '<br>');
+        }
+        document.write('<hr>');
+
+        // 方法二 for of
+        for (
+            var n of arr1) {
+            document.write(n);
+            document.write('<br>');
+        }
+        document.write('<hr>');
+
+        // 方法三 forEach
+        arr1.forEach((b) => {
+            document.write(b);
+            document.write('<br>');
+        });
+        document.write('<hr>');
+
+        // 方法四 map
+        arr1.map((c) => {
+            document.write(c);
+            document.write('<br>');
+        });
+        document.write('<hr>');
+    </script>
+</body>
+
+</html>
