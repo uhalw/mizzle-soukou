@@ -10,12 +10,24 @@
 <body>
     <script>
         var arr1 = [5, 60, 3, '123', 90, true, 33, 1, 100];
+
+        // 過濾出奇數的數字
         var odds = arr1.filter((a) => {
-            if (typeof a === "number" && a % 2 === 1) {
-            }
+            return typeof a === "number" && a % 2 === 1;
         });
-        console.log(odds);
-function mul (n1)
+        console.log("奇數:", odds);
+
+        // 定義一個函式來將每個奇數乘以指定數字
+        function mul(n1) {
+            // 將每個奇數乘以 n1
+            var result = odds.map(num => num * n1);
+            console.log("乘法結果:", result);
+            return result;
+        }
+
+        // 測試乘法函式
+        mul(2); // 假設要將奇數數字乘以 2
+        
     </script>
 </body>
 

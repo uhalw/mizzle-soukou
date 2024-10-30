@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遞增遞減反轉</title>
+</head>
+
+<body>
+
+    <script>
+
+        var arr1 = [1, 5, 100, 3, 30];
+        var arr2 = [1, 5, 100, 55, 3, 30, 60, 90];
+
+        console.log(arr2);
+        console.log(`針對第一個5的位置 => ${arr2.indexOf(5)}`);
+        console.log(`最後一個5的位置 => ${arr2.lastIndexOf(5)}`);
+        if (arr2.includes(5)) {
+            arr2.map((n1, index) => {
+                if (n1 === 5) {
+                    console.log(index);
+                }
+            });
+        }
+
+
+        console.log(arr2);
+
+
+        console.log(`新增前：${arr2}`);
+
+        // 新增值到最後 push
+        arr2.push(88);
+        console.log(`新增後：${arr2}`);
+
+        // 新增值到陣列最前面 unshift
+        arr2.unshift([`a`, `b`, `c`,]);
+        console.log(`新增後：${arr2}`);
+
+        //查看最後的值
+        console.log(arr1[arr1.length - 1]);
+        console.log(arr1);
+
+        // 取出最後數值並移除
+        console.log(arr1.pop());
+        console.log(arr1);
+
+        // 排序
+        console.log(`排序前：${arr1}`);
+
+        // 排序處理，遞增
+        arr1.sort((a, b) => {
+            return a - b;
+        });
+        console.log(`遞增排序後：${arr1}`);
+
+        // 排序處理，遞減
+        arr1.sort((a, b) => {
+            return b - a;
+        });
+        console.log(`遞減排序後：${arr1}`);
+
+        // 反轉遞減
+        console.log(`反轉後的結果：${arr1.reverse()}`);
+    </script>
+</body>
+
+</html>
