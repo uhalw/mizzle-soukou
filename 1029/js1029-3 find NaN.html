@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>找非數值 filter </title>
+</head>
+
+<body>
+    <script>
+        //找出陣列中非數值
+        var arr1 = [4, 60, 4, 90, '1245', 'tt', -33, 1, 100];
+        console.log('BEFORE');
+        console.log(arr1);
+
+        // 去除非數值的陣列資料，保留數值的資料給arr2
+        var arr2 =[];
+        arr2 = arr1.filter((data) => {
+            if (typeof data === "number") {
+                return data;
+            }
+        });
+console.log('AFTER');
+console.log(arr2);
+
+
+    </script>
+</body>
+
+</html>
