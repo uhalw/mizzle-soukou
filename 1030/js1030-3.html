@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var lott = [];
+        for (var i = 0; i < 6; i++) {
+            // 亂數
+            var no = Math.floor(Math.random() * 49) + 1;
+            if (lott.includes(no)) {
+                i = i - 1;
+                continue;
+            } else {
+                lott[i] = no;
+            }
+        }
+        console.log(lott);
+
+
+        // 1-49號產生1個特別號（不可以跟前6個號碼重複）
+        while (true) {
+            var sno = Math.floor(Math.random() * 49) + 1;
+            if (lott.includes(sno)) {
+                // found, repeated
+                continue;
+            } else {
+                // cant found, no repeated
+                lott.push(sno);
+                break;
+            }
+        }
+        console.log(`特：${sno}`);
+
+    </script>
+</body>
+
+</html>

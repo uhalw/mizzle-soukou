@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三合一樂透蹦蹦蹦</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 1. 大樂透：1-49 取 6，特：1-49 取1){
+        // 大樂透的正確中獎號碼是winbiglot。特別號是winbiglotsp。運作的函式是 runbiglot 但還沒寫到那
+        // var winbiglot = [7, 19, 25, 35, 36, 38];
+        // var winbiglotsp = 42;
+        var biglot = [];
+        for (var i = 0; i < 6; i++) {
+            // 大樂透電腦亂數選1組共6碼
+            var pool = Math.floor(Math.random() * 49) + 1;
+            if (biglot.includes(pool)) {
+                i = i - 1;
+                continue;
+            } else {
+                biglot[i] = pool;
+            }
+        }
+        // 亂數的6碼如下
+        console.log(`您的大樂透號碼是：${biglot}`);
+
+        // 特別號產生
+        while (true) {
+            var biglotsp = Math.floor(Math.random() * 49) + 1;
+            if (biglot.includes(biglotsp)) {
+                continue;
+            } else {
+                biglot.push(biglotsp);
+                break;
+            }
+        }
+        // 亂數特殊碼如下
+        console.log(`您的大樂透特殊碼是：${biglotsp}`);
+
+
+        // 2. 威力彩：1-38 取 6，特：1-8   取1
+        // 威力彩的正確中獎號碼是winwelly。運作的函式是 runwelly 但還沒寫到那
+        var welly = [];
+        for (var i = 0; i < 6; i++) {
+            // 威力彩電腦亂數選1組共6碼
+            var pool = Math.floor(Math.random() * 38) + 1;
+            if (welly.includes(pool)) {
+                i = i - 1;
+                continue;
+            } else {
+                welly[i] = pool;
+            }
+        }
+        // 亂數的6碼如下
+        console.log(`您的威力彩號碼是：${welly}`);
+
+        // 威力彩特別號產生
+        while (true) {
+            var wellysp = Math.floor(Math.random() * 8) + 1;
+            if (welly.includes(wellysp)) {
+                continue;
+            } else {
+                welly.push(wellysp);
+                break;
+            }
+        }
+        // 威力彩亂數特殊碼如下
+        console.log(`您的威力彩特殊碼是：${wellysp}`);
+
+
+        // 3. 今彩539　：1-39 取 5
+        // 今彩539的正確中獎號碼是winnow。驗證運作的函式是 runnow 但還沒寫到那
+        var now = [];
+        for (var i = 0; i < 5; i++) {
+            // 今彩539電腦亂數選1組共5碼
+            var pool = Math.floor(Math.random() * 39) + 1;
+            if (now.includes(pool)) {
+                i = i - 1;
+                continue;
+            } else {
+                now[i] = pool;
+            }
+        }
+        // 亂數的5碼如下
+        console.log(`您的今彩539號碼是：${now}`);
+
+
+    </script>
+
+</body>
+
+</html>

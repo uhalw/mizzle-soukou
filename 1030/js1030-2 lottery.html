@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大樂透</title>
+</head>
+
+<body>
+    <script>
+        var lott = [];
+        for (var i = 0; i < 6; i++){
+            // 亂數
+            var no = Math.floor(Math.random() * 49) + 1;
+            if (lott.includes(no)) {
+                // 有找到，重複
+            } else {
+                // 沒找到，沒重複
+                lott[i] = no;
+            }
+        }
+        console.log(lott);
+
+        // 正確的6個號碼是 19, 26, 36, 38, 39, 49, 16
+        // 1-49號產生6個號碼（不重覆）
+        // 先定義號碼池是在1~49間
+        // 號碼會隨機從中選6個不重複地出來
+        // 核對隨機的號碼是否跟正確的號碼相同
+
+        // 1-49號產生1個特別號（可以重覆）
+
+
+
+
+    </script>
+</body>
+
+</html>

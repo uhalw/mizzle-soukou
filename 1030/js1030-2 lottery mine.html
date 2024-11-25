@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大樂透</title>
+</head>
+
+<body>
+    <script>// 正確的號碼是 19, 26, 36, 38, 39, 49，特別號16
+        var jackpot = [19, 26, 36, 38, 39, 49];
+        var special = 16; // 正確的特別號
+        console.log(`正確的號碼是：${jackpot}。特殊號碼是：${special}。`);
+
+        // Function to generate 6 unique random numbers from 1 to 49
+        function generateUniqueNumbers() {
+            var numbers = new Set();
+            while (numbers.size < 6) { // Generate only 6 unique numbers
+                var randomNumber = Math.floor(Math.random() * 49) + 1;
+                numbers.add(randomNumber);
+            }
+            return Array.from(numbers); // Convert Set to Array
+        }
+
+        // Function to generate 1 random special number (can repeat)
+        function generateSpecialNumber() {
+            return Math.floor(Math.random() * 49) + 1; // Random number between 1 and 49
+        }
+
+        // Function to check if generated numbers match the jackpot numbers
+        function checkResults() {
+            var generatedNumbers = generateUniqueNumbers();
+            var generatedSpecialNumber = generateSpecialNumber();
+
+            console.log(`隨機產生的號碼是：${generatedNumbers}`);
+            console.log(`隨機產生的特殊號碼是：${generatedSpecialNumber}`);
+
+            // Check if generated numbers match all jackpot numbers (order doesn't matter)
+            var isJackpotMatch = jackpot.every(function (num) {
+                return generatedNumbers.includes(num);
+            });
+
+            console.log(`是否中獎？`, isJackpotMatch ? `是！恭喜發財` : `否，再接再厲。`);
+        }
+
+        // Run the check
+        checkResults();
+
+        // 正確的6個號碼是 19, 26, 36, 38, 39, 49, 16
+        // 1-49號產生6個號碼（不重覆）
+        // 先定義號碼池是在1~49間
+        // 號碼會隨機從中選6個不重複地出來
+        // 核對隨機的號碼是否跟正確的號碼相同
+
+        // 1-49號產生1個特別號（可以重覆）
+
+
+
+
+    </script>
+</body>
+
+</html>

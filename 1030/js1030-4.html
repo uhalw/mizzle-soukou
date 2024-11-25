@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三合一樂透蹦蹦蹦</title>
+</head>
+
+<body>
+
+    <script>
+        //通用函式來產生號碼
+        function getlotnum(lotname, count, max, spCheck, spMax) {
+            var lot = [];
+            for (var i = 0; i < count; i++) {
+
+                // 電腦亂數選1組
+                var pool = Math.floor(Math.random() * max) + 1;
+                if (lotname.includes(pool)) {
+                    i = i - 1;
+                    continue;
+                } else {
+                    lotname[i] = pool;
+                }
+            }
+            // 亂數的6碼如下
+            console.log(`${lotname}您的大樂透號碼是：${pr}`);
+        }
+
+
+        // 通用函式來產生特殊號碼
+        while (true) {
+            var spCount = Math.floor(Math.random() * spMax) + 1;
+            if (biglot.includes(biglotsp)) {
+                continue;
+            } else {
+                biglot.push(biglotsp);
+                break;
+            }
+        }
+        // 呼叫函式並傳參數
+        var lotgenre = window.prompt('請輸入你要玩的樂透：1. 大樂透 2.威力彩 3. 今彩');
+        if (lotgenre === '1') {
+            // 產生大樂透號碼
+            getlotnum('您選擇的是「大樂透」，', 6, 49);
+        } else if (lotgenre === '2') {
+            // 產生威力彩號碼
+            getlotnum('您選擇的是「威力彩」，', 6, 38);
+        } else if (lotgenre === '3') {
+            // 產生今彩號碼
+            getlotnum('您選擇的是「今彩」，', 5, 39);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
