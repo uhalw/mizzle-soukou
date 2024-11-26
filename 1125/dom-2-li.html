@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul-one">
+        <li id="1" class="subjects">HTML</li>
+        <li id="2" class="subjects">CSS</li>
+        <li id="3" class="subjects">JavaScript</li>
+    </ul>
+
+    <ul id="ul-two">
+
+        <li class="drinks">americano</li>
+        <li class="drinks">latte</li>
+        <li class="drinks">blacktea</li>
+    </ul>
+    <script>
+        // getHTML
+        // let subjects = document.getElementsByTagName('li');
+        // let subjects = document.getElementsByClassName('subjects');
+        let subjects=document.querySelectorAll('.subjects');
+        // // console.log(subjects);
+        // for (let i = 0; i < subjects.length; i++) {
+        //     console.log(subjects[i].textContent);
+        // }
+        // let subject = document.getElementById('2').textContent;
+    
+        // let subject = document.querySelector('ul');
+        for (let i=0; i<subjects.length; i++){
+        console.log(subjects[i].innerHTML);
+        }
+    </script>
+</body>
+
+</html>

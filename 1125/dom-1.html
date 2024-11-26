@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件物件模型-DOM</title>
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <hr>
+    <form>
+        please choose the subject:
+        <br>
+        <input name="subject" type="checkbox" value="html" checked="true">HTML
+        <input name="subject" type="checkbox" value="css">CSS
+        <input name="subject" type="checkbox" value="js" checked="true">JAVASCRIPT
+        <!-- 綁定事件方法 -->
+        <input type="button" onclick="getSubjects()" value="submit">
+        <!-- 監聽事件方法 -->
+        <input id="btn1" type="button" value="送出">
+    </form>
+
+    <script>
+        let subjects = document.getElementsByName('subjects');
+        console.log(subjects);
+        for (let i = 0; i < subjects.length; i++) {
+            // console.log(subject[i].value);
+        }
+        function getSubjects() {
+            // show chosen (checked)content>value
+            for (let i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    console.log(subject[i].value);
+                }
+            }
+        }
+
+        // 監陣(?)事件
+        // addEventListener（'事件名稱'，事件發生時的城市處理）
+        // 事件發生時程式碼
+        document.getElementById('btn1').addEventListener('click', () => {
+            for (let i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    console.log(subject[i].value);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

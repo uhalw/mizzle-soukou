@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>取得元素屬性</h1>
+    <hr>
+    <a id="engine" href="https://www.google.com.tw/?hl=zh_TW">GOOOOOOOOOOOOOOOOOGLE
+        <button id="btnEngine">change engine</button>
+
+    </a>
+
+    <script>
+        let engine = document.
+        getElementById('engine');
+//         if (engine = document.getElementById('engine');
+// )
+if(engine.hasAttribute('href')){
+    console.log('yes');
+engine.removeAttribute('href');
+}else{
+        console.log(X);
+        engine.setAttribute('href',"https://www.google.com.tw/?hl=zh_TW")
+    }
+        // // get href link
+        // let engine = document.getElementById('engine');
+        // // get href property
+        // console.log(engine.href);
+
+        // document.querySelector('#btnEngine1').addEventListener('click', () => {
+        //     // change htrgf property
+        //     engine.href = "https://www.bing.com";
+        // })    
+
+    </script>
+</body>
+
+</html>

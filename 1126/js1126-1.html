@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textoutput</title>
+    <style>
+
+    </style>
+</head>
+<p id="p1">
+    <span id="span1">hello <br> js</span>
+    <span style="display: none;">noo seeee</span>
+</p>
+<h3>itsssss using textcontent output</h3>
+<textarea name="" id="textContentOutput" row="60" cols="60"></textarea>
+<h3>innertext</h3>
+<textarea name="" id="innerTextOutput" row="60" cols="60"></textarea>
+<h3>innerHTML</h3>
+<textarea name="" id="innerHtmlOutput" row="60" cols="60"></textarea>
+
+<script>
+    // get p
+    let p1 = document.getElementById('p1');
+    // get textcontent
+    let textContentOutput = document.getElementById('textContentOutput');
+    // innerText
+    let innerTextOutput = document.getElementById('innerTextOutput');
+    // innerHtml
+    let innerHtmlOutput = document.getElementById('innerHtmlOutput');
+
+    textContentOutput.value = p1.textContent;
+    innerTextOutput.value = p1.innerText;
+    innerHtmlOutput.value = p1.innerHtml;
+
+</script>
+
+<body>
+</body>
+
+</html>
