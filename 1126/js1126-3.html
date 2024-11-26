@@ -5,21 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .errColor {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
     <form>
-        <label for="score">score:</label>
-        <input type="text" name="" id="score" maxlength="3" size="5">
-        <span id="'msg"></span>
-        <input type="button" value="成績確認" name="" id="btn1">
+        <p>
+            <label for="score">score:</label>
+            <input type="text" id="score" maxlength="3" size="5">
+            <span id="msg"></span>
+        </p>
+        <p>
+            <input type="button" value="check" name="" id="btn1">
+        </p>
     </form>
-    <script>
-let msg= document.getElementById('msg');
-let score= document.getElementById('socre');
-let btn1= document.getElementById('btn1');
 
+    <script>
+        let msg = document.getElementById('msg');
+        let score = document.getElementById('score');
+        let btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', () => {
+
+            msg.removeAttribute('style');
+            if (score.value === "") {
+                msg.textContent = "分數不可留白";
+                msg.classname = "errColor";
+            } else if (score.value >= 60) {
+                msg.textContent = "passed";
+                msg.style.color = "blue";
+            } else if (score.value >= 0 && score.value < 60) {
+                msg.textContent = "didn't passed 😒";
+                msg.style.color = "red";
+            } else {
+                msg.textContent = "errror";
+                msg.className = "errorColor";
+            }
+        })
     </script>
+
 </body>
 
 </html>
